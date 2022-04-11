@@ -1,0 +1,23 @@
+<p>Liste utilisateur</p>
+<button routerLink="/add">Ajouter</button>
+<button (click)="deleteAll()">tous Suprimer</button>
+
+
+
+<table >
+    <thead>
+        <tr>
+        <th>Nom</th>
+        <th>Identifiant</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of ListUser">
+        <td>{{user.name}}</td>
+        <td>{{user.identifiant}}</td>
+        <td><button (click)="delete(user.id)">Supprimer</button></td>
+        <td><button (click)="update(user.id)">Editer</button></td>
+        </tr>
+    </tbody>
+</table>
+
